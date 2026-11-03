@@ -6,7 +6,9 @@ It demonstrates data preparation, data-quality checks, summary statistics, and v
 
 ## Data
 
-The project uses a prepared CSV dataset derived from a supplied Excel workbook containing unemployment figures originally sourced from Trading Economics. The original workbook is not included in the current project files.
+This is a demonstration project using a supplied dataset to practise Python data preparation, summary statistics, and visualization. The figures are illustrative, and their accuracy and cross-country comparability have not been independently verified.
+
+The prepared CSV dataset is included. The original Excel workbook is not included in the current project files.
 
 | Item | Description |
 |---|---|
@@ -23,8 +25,6 @@ The preparation step used three columns from the original workbook:
 - `quarter`: year and quarter.
 
 - `unemp`: unemployment rate.
-
-This is a demonstration project. Definitions, seasonal adjustment, and cross-country comparability have not been independently verified. The figures should therefore be treated as illustrative.
 
 ## Questions
 
