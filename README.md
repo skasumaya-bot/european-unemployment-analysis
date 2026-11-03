@@ -6,7 +6,7 @@ It demonstrates data preparation, data-quality checks, summary statistics, and v
 
 ## Data
 
-The project uses a supplied Excel dataset containing unemployment figures originally sourced from Trading Economics.
+The project uses a prepared CSV dataset derived from a supplied Excel workbook containing unemployment figures originally sourced from Trading Economics. The original workbook is not included in the current project files.
 
 | Item | Description |
 |---|---|
@@ -16,7 +16,7 @@ The project uses a supplied Excel dataset containing unemployment figures origin
 | Observations | 1,080 |
 | Main variable | Unemployment rate (%) |
 
-The analysis uses three columns from the supplied workbook:
+The preparation step used three columns from the original workbook:
 
 - `country_name`: country name.
 
@@ -102,7 +102,7 @@ Negative values indicate a decrease. Positive values indicate an increase.
 
 | File | Purpose |
 |---|---|
-| `01_prepare_data.py` | Prepare and check the data |
+| `01_prepare_data.py` | Optional preparation step requiring the original workbook |
 | `02_country_comparison.py` | Calculate country summaries and plot average rates |
 | `03_unemployment_trends.py` | Create separate trend charts for all countries |
 | `04_unemployment_changes.py` | Compare starting and ending unemployment rates |
@@ -113,31 +113,26 @@ Negative values indicate a decrease. Positive values indicate an increase.
 
 ## How to run
 
-Place the original workbook, `FD214_103 (1).xlsx`, in the same folder as the Python scripts.
+The prepared dataset is included in `data/unemployment_2015_2024.csv`.
 
 Install the required packages:
 
 ```bash
-
 python -m pip install -r requirements.txt
-
 ```
 
-Run the scripts in this order:
+Run the analysis scripts in this order:
 
 ```bash
-
-python 01_prepare_data.py
-
 python 02_country_comparison.py
-
 python 03_unemployment_trends.py
-
 python 04_unemployment_changes.py
-
 ```
 
-The scripts create the `data` and `outputs` folders automatically. Running them again overwrites the generated files, while leaving the original workbook unchanged.
+The scripts save tables and charts in the `outputs` folder. Running them again overwrites the generated results.
+
+The original Excel workbook is not included in the current project files.
+`01_prepare_data.py` documents how the data were prepared. Running that optional preparation script requires the original workbook, `FD214_103 (1).xlsx`, beside the Python scripts.
 
 ## Limitations
 
